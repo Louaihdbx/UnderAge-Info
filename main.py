@@ -26,6 +26,7 @@ class Xnce():
                 print("[-] accounts.txt is missing")
                 input()
                 exit()
+            self.sleep = int(input("[+] sleep (ex: 5): "))
             for userpass in self.accounts:
                 if ':' in userpass:
                     self.username = userpass.split(':')[0]
@@ -76,4 +77,5 @@ class Xnce():
             open("info.txt","a").write(f'{self.username}:{self.password} "phone_number":"{phone_number}","email":"{email}"\n')
         else:
             print(f'[-] {self.username}:{self.password} {req.text}')
+        time.sleep(self.sleep)
 Xnce()
