@@ -16,6 +16,7 @@ class Xnce():
               Instagram: @xnce / @ro1c\n""")
         mode = input("[1] 1 account [2] list (user:pass): ")
         if mode=="1":
+            self.sleep = 0
             self.username = input("[+] username: ")
             self.password = input("[+] password: ")
             self.login()
